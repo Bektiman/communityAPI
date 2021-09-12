@@ -39,10 +39,13 @@ $router->get('/user/{id}', function ($id){
 // });
 $router->get('/cekdb', 'CobaController@show');
 $router->get('organisasi/{jabid}[/nip/{nip}]','OrganisasiController@show');
-$router->get('kantor[/{kantorid}]','OrganisasiController@getKantor');
+//$router->get('kantor[/{kantorid}]','OrganisasiController@getKantor');
 $router->get('pegawai/eselon1','OrganisasiController@getEselon1');
 $router->get('pegawai/eselon2/{kantorid}[/{orgid}]','OrganisasiController@getEselon2');
 $router->get('pegawai/eselon3/{kantorid}[/{orgid}]','OrganisasiController@getEselon3');
+$router->get('pegawai/kantor/{kantorid}','KantorController@getPegawai');
+$router->get('kantor/{namakantor}','KantorController@getKantor');
+$router->post('kantor/','KantorController@getKantor');
 // $router->get('/organisasi/{jabid}', function($jabid){
 
 //     $query = "SELECT * FROM public.view_pegawai
