@@ -46,6 +46,7 @@ $router->get('pegawai/eselon3/{kantorid}[/{orgid}]','OrganisasiController@getEse
 $router->get('pegawai/kantor/{kantorid}','KantorController@getPegawai');
 $router->get('kantor/{namakantor}','KantorController@getKantor');
 $router->post('kantor/','KantorController@getKantor');
+$router->get('kantor/baru/{indeks}','KantorController@getPegawai');
 // $router->get('/organisasi/{jabid}', function($jabid){
 
 //     $query = "SELECT * FROM public.view_pegawai
